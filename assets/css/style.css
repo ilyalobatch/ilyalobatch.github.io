@@ -1,163 +1,135 @@
-/**** Header ****/
-
-.itlife-header-section {
-  padding: 10px 0;
-  border-bottom: 1px solid #BDBDBD;
+* {
+  font-family: 'Delius Unicase', cursive;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: 0.05em;
 }
 
-/**** Header-button ****/
-
-.itlife-header-button {
-  padding: 8px 20px;
-  border: 1px solid #3C3C3C;
-  transition: all 0.4s;
+.container {
+  padding: 120px 135px 0;
 }
 
-.itlife-header-button:hover {
-  background-color: #18B5DC;
-  border-color: #18B5DC;
-  color: #FFF;
+.title {
+  margin-bottom: 80px;
 }
 
-/**** Main ****/
-
-.itlife-main-section {
-  padding: 150px 0;
-  background-color: #F6F6F6;
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  grid-gap: 30px;
+  padding-bottom: 120px;
 }
 
-.itlife-header {
+.image-box {
+  min-width: 370px;
+  min-height: 370px;
   position: relative;
-  padding-bottom: 20px;
-  margin-bottom: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.6s;
 }
-.itlife-header::before {
+
+.image-box:hover {
+  transition: 0.6s;
+  background: none;
+}
+
+.icon-box {
   position: absolute;
-  content: "";
-  height: 4px;
-  bottom: 0;
-  margin: auto;
-  background-color: #DDDBDB;
-  width: 45px;
-}
-
-.itlife-lorem-text {
-  max-width: 570px;
-  margin: auto;
-  margin-bottom: 60px;
-}
-
-.itlife-author-image {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.itlife-author-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  background-color: #18B5DC;
-  opacity: 0;
-  transition: all 0.4s;
+  top: 0;
+  padding: 20px 20px;
+  transform: scale(0);
+  transition: all .5s;
 }
 
-.itlife-author-image:hover .itlife-author-info {
+.image-box:hover .icon-box {
+  transform: scale(1);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(224, 224, 224, 0.5);
+  line-height: 0;
+  padding: 10px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.image-box:hover .icon {
   opacity: 1;
 }
 
-.itlife-author-icon-box {
-  padding: 10px;
-  border: 1px solid #FFF;
-  cursor: pointer;
-  transition: all 0.3s;
+.icon:hover {
+  background-color: rgba(224, 224, 224, 1);
+  ;
 }
 
-.itlife-author-icon-box:hover {
-  background-color: #FFF;
-  transform: scale(1.15);
-}
-
-.itlife-author-icon-box:hover .itlife-author-icon {
-  transition: all 0.3s;
-  fill: #18B5DC;
-}
-
-/**** Footer ****/
-
-.itlife-footer-section {padding: 40px 0;}
-
-.itlife-footer-logo {margin-bottom: 25px;}
-
-.itlife-footer-links {margin-bottom: 28px;}
-
-.itlife-footer-icon-box {
-  padding: 10px;
-  border: 1px solid #18B5DC;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.itlife-footer-icon-box:hover {
-  background-color: #18B5DC;
-  transform: scale(1.15);
-}
-
-.itlife-footer-icon-box:hover .itlife-footer-icon {
-  transition: all 0.3s;
-  fill: #FFF;
-}
-
-
-/**** Logo ****/
-
-.itlife-logo {
-  width: 160px;
-}
-
-.itlife-logo:hover {
-  cursor: pointer;
-}
-
-.itlife-logo-img, .itlife-logo-text {
-  transition: all 0.4s;
-}
-
-.itlife-logo:hover .itlife-logo-text {
-  transform: scale(1.2);
-  color: #18B5DC;
-  margin-left: 15px;
-}
-
-
-/**** Nav Items ****/
-
-.itlife-nav-item {
+.image {
   position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-.itlife-nav-item::before {
+.text-box {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 0;
+  padding: 0px 20px 20px;
+}
+
+.text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFF;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.text-grey {
+  color: #E0E0E0;
+}
+
+.background-box {
   position: absolute;
   content: "";
-  bottom: -5px;
-  right: 0;
+  top: 0;
   left: 0;
-  margin: auto;
-  height: 2px;
-  background-color: #18B5DC;
-  width: 0%;
-  transition: all 0.4s;
-}
-
-.itlife-nav-item:hover::before {
   width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+  transition: .4s;
+  z-index: -1;
 }
 
-.itlife-nav-link {
-  transition: all 0.3s;
-}
-.itlife-nav-link:hover {
-  color: #18B5DC;
+.image-box:hover .background-box {
+  opacity: 0.5;
 }
 
+.span-2-clmn {
+  grid-column: span 2;
+}
+
+.span-2-row {
+  grid-row: span 2;
+}
+
+.center {
+  text-align: center;
+}

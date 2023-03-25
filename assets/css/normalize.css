@@ -15,15 +15,21 @@
 }
 
 *:focus,
-*:active { outline: none; }
+*:active {
+  outline: none;
+}
 
 a:focus,
-a:active { outline: none; }
+a:active {
+  outline: none;
+}
 
 nav,
 footer,
 header,
-aside { display: block; }
+aside {
+  display: block;
+}
 
 html,
 body {
@@ -38,10 +44,17 @@ body {
 
 input,
 button,
-textarea { font-family: inherit; }
+textarea {
+  font-family: inherit;
+}
 
-input::-ms-clear { display: none; }
-button { cursor: pointer; }
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
 
 button::-moz-focus-inner {
   padding: 0;
@@ -54,9 +67,18 @@ a,
 a:visited {
   text-decoration: none;
 }
-a:hover { text-decoration: none; }
-ul li { list-style: none; }
-img { vertical-align: top; }
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
 
 h1,
 h2,
